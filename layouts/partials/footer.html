@@ -208,7 +208,7 @@
             {{ end }}
              </ul>
 		<p class="copyright text-muted">
-                    Copyright &copy; {{ .Site.Title }} {{ now.Year }} {{- if .Site.Params.icp }} | {{ with .Site.Params.icp }}{{ . | markdownify }}{{ end }}{{- end}}
+                    {{ .Site.Title }} {{ now.Year }} {{- if .Site.Params.icp }} | {{ with .Site.Params.icp }}{{ . | markdownify }}{{ end }}{{- end}}
                 </p>
             </div>
         </div>
