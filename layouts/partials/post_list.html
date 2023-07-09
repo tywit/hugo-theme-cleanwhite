@@ -12,12 +12,13 @@
         </h3>
 	{{ end }}
         <div class="post-content-preview">
-	{{ with .Description }}
-            {{ . }}
-        {{ else }}
+            {{ with .Description }}
+            {{ . | safeHTML }}
+            {{ else }}
             {{ .Summary}}
-       {{ end }}
+            {{ end }}
         </div>
+
     </a>
 </div>
 <hr>
