@@ -28,6 +28,11 @@
                     <li class="navbar-item">
                         <a href="{{ "/" | relLangURL }}">Wszystkie wpisy</a>
                     </li>
+                    {{ range .Site.Params.addtional_menus }}
+                        <li class="navbar-item">
+                            <a href="{{.href | relLangURL}}/">{{.title}}</a></li>
+                        <li>
+                    {{ end }}
                     <li class="navbar-item">
                         <a href="{{ "search" | relURL }}"><i class="fa fa-search"></i></a>
 		           </li>
